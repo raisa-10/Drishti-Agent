@@ -24,7 +24,6 @@ Backend (Python)
 1. Create and activate a virtual environment (PowerShell example):
 
 ```powershell
-cd c:\Users\asmat\Downloads\Drishti-Agent-main\backend
 python -m venv venv
 .\venv\Scripts\Activate.ps1
 pip install -r requirements.txt
