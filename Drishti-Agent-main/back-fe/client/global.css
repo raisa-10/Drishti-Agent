@@ -1,0 +1,117 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /**
+   * Project Drishti Command Center Theme
+   * Dark theme with midnight blue/black background and cyan/orange/neon green accents
+   */
+  :root {
+    --background: 220 27% 6%;
+    --foreground: 210 20% 98%;
+
+    --card: 220 20% 8%;
+    --card-foreground: 210 20% 98%;
+
+    --popover: 220 20% 8%;
+    --popover-foreground: 210 20% 98%;
+
+    --primary: 189 85% 55%;
+    --primary-foreground: 220 27% 6%;
+
+    --secondary: 220 15% 12%;
+    --secondary-foreground: 210 20% 98%;
+
+    --muted: 220 15% 12%;
+    --muted-foreground: 215 13% 65%;
+
+    --accent: 189 85% 55%;
+    --accent-foreground: 220 27% 6%;
+
+    --destructive: 0 90% 63%;
+    --destructive-foreground: 210 20% 98%;
+
+    --warning: 35 91% 65%;
+    --warning-foreground: 220 27% 6%;
+
+    --success: 142 71% 45%;
+    --success-foreground: 210 20% 98%;
+
+    --border: 220 15% 15%;
+    --input: 220 15% 15%;
+    --ring: 189 85% 55%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 220 20% 8%;
+    --sidebar-foreground: 210 20% 98%;
+    --sidebar-primary: 189 85% 55%;
+    --sidebar-primary-foreground: 220 27% 6%;
+    --sidebar-accent: 220 15% 12%;
+    --sidebar-accent-foreground: 210 20% 98%;
+    --sidebar-border: 220 15% 15%;
+    --sidebar-ring: 189 85% 55%;
+
+    --chart-1: 189 85% 55%;
+    --chart-2: 35 91% 65%;
+    --chart-3: 142 71% 45%;
+    --chart-4: 258 90% 66%;
+    --chart-5: 340 75% 55%;
+  }
+
+  .dark {
+    --background: 220 27% 6%;
+    --foreground: 210 20% 98%;
+
+    --card: 220 20% 8%;
+    --card-foreground: 210 20% 98%;
+
+    --popover: 220 20% 8%;
+    --popover-foreground: 210 20% 98%;
+
+    --primary: 189 85% 55%;
+    --primary-foreground: 220 27% 6%;
+
+    --secondary: 220 15% 12%;
+    --secondary-foreground: 210 20% 98%;
+
+    --muted: 220 15% 12%;
+    --muted-foreground: 215 13% 65%;
+
+    --accent: 189 85% 55%;
+    --accent-foreground: 220 27% 6%;
+
+    --destructive: 0 90% 63%;
+    --destructive-foreground: 210 20% 98%;
+
+    --warning: 35 91% 65%;
+    --warning-foreground: 220 27% 6%;
+
+    --success: 142 71% 45%;
+    --success-foreground: 210 20% 98%;
+
+    --border: 220 15% 15%;
+    --input: 220 15% 15%;
+    --ring: 189 85% 55%;
+
+    --sidebar-background: 220 20% 8%;
+    --sidebar-foreground: 210 20% 98%;
+    --sidebar-primary: 189 85% 55%;
+    --sidebar-primary-foreground: 220 27% 6%;
+    --sidebar-accent: 220 15% 12%;
+    --sidebar-accent-foreground: 210 20% 98%;
+    --sidebar-border: 220 15% 15%;
+    --sidebar-ring: 189 85% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}

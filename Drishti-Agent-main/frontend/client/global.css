@@ -1,0 +1,146 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /**
+   * Tailwind CSS theme
+   * tailwind.config.ts expects the following color variables to be expressed as HSL values.
+   * A different format will require also updating the theme in tailwind.config.ts.
+  */
+  :root {
+    /* Command Center Theme - Dark Mode by Default */
+    --background: 220 25% 6%;
+    --foreground: 220 15% 95%;
+
+    --card: 220 20% 8%;
+    --card-foreground: 220 15% 95%;
+
+    --popover: 220 25% 10%;
+    --popover-foreground: 220 15% 95%;
+
+    --primary: 190 100% 50%;
+    --primary-foreground: 220 25% 6%;
+
+    --secondary: 220 15% 15%;
+    --secondary-foreground: 220 15% 85%;
+
+    --muted: 220 15% 12%;
+    --muted-foreground: 220 10% 60%;
+
+    --accent: 190 100% 50%;
+    --accent-foreground: 220 25% 6%;
+
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 220 15% 95%;
+
+    --border: 220 15% 20%;
+    --input: 220 15% 15%;
+    --ring: 190 100% 50%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 220 30% 4%;
+    --sidebar-foreground: 220 15% 85%;
+    --sidebar-primary: 190 100% 50%;
+    --sidebar-primary-foreground: 220 25% 6%;
+    --sidebar-accent: 220 20% 12%;
+    --sidebar-accent-foreground: 220 15% 95%;
+    --sidebar-border: 220 15% 15%;
+    --sidebar-ring: 190 100% 50%;
+
+    /* Command Center Specific Colors */
+    --command-bg: 220 30% 4%;
+    --command-surface: 220 25% 8%;
+    --command-border: 220 15% 18%;
+
+    /* Neon Blue Theme */
+    --neon-blue: 190 100% 50%;
+    --neon-cyan: 180 100% 60%;
+    --neon-glow: 190 100% 70%;
+
+    /* Status Colors */
+    --danger: 0 75% 55%;
+    --danger-dark: 0 65% 45%;
+    --danger-glow: 0 85% 65%;
+
+    --warning: 45 100% 55%;
+    --warning-glow: 45 100% 70%;
+
+    --success: 140 75% 50%;
+    --success-glow: 140 85% 60%;
+  }
+
+
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-command-bg text-foreground;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    overflow-x: hidden;
+  }
+
+  /* Command Center specific styles */
+  .neon-glow {
+    box-shadow: 0 0 10px currentColor, 0 0 20px currentColor, 0 0 30px currentColor;
+  }
+
+  .scan-line::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, theme(colors.neon.blue), transparent);
+    animation: scan-line 2s linear infinite;
+  }
+
+  /* Terminal text effect */
+  .terminal-text {
+    font-family: 'JetBrains Mono', 'Fira Code', monospace;
+    text-shadow: 0 0 10px currentColor;
+  }
+
+  /* Glass morphism effect */
+  .glass {
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  /* Custom scrollbar styling for dark theme */
+  .custom-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: hsl(var(--command-border)) hsl(var(--command-surface));
+  }
+
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: hsl(var(--command-surface));
+    border-radius: 4px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: hsl(var(--command-border));
+    border-radius: 4px;
+    border: 1px solid hsl(var(--command-surface));
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--neon-blue) / 0.7);
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-corner {
+    background: hsl(var(--command-surface));
+  }
+}

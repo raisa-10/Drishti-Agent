@@ -1,0 +1,15 @@
+fastapi
+uvicorn[standard]
+python-dotenv
+firebase-admin
+google-cloud-aiplatform
+google-cloud-vision
+google-cloud-storage
+google-generativeai
+numpy
+opencv-python
+pandas
+scikit-learn
+joblib
+Pillow
+httpx  # <-- Make sure this is here for the dispatch service
